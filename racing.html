@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>F1 Ferrari</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        #card1,
+        #card2,
+        #card3 {
+            width: 350px;
+            height: 70vh;
+        }
+
+
+        /* carousel style */
+        .carousel-caption {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            color: white;
+            border-radius: 10px;
+        }
+
+        .carousel-caption h5 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .carousel-caption p {
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+
+        .carousel-indicators li {
+            background-color: rgba(255, 255, 255, 0.6);
+            border-radius: 50%;
+            width: 12px;
+            height: 12px;
+            margin: 0 5px;
+        }
+
+        .carousel-indicators li.active {
+            background-color: #ff4b4b;
+        }
+
+
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            color: white;
+            font-size: 2rem;
+        }
+
+        .carousel-control-prev {
+            left: 50px;
+        }
+
+        .carousel-control-next {
+            right: 50px;
+        }
+
+        /* Body styles */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #F7F7F7;
+            color: #333;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        /* Navbar styles */
+        .navbar {
+            background-color: #D80000;
+            color: #fff;
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-link {
+            color: #fff !important;
+            font-weight: bold;
+        }
+
+        .nav-link:hover {
+            color: #FFD700 !important;
+        }
+
+        /* Main content styles */
+        .container {
+            margin-top: 50px;
+        }
+
+        .lowerbody2 {
+            height: 80px;
+            width: 100%;
+            background-color: white;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 0;
+            border: none;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #D80000;
+            margin-bottom: 1rem;
+        }
+
+        .list-group-item {
+            border: none;
+            padding: 0.5rem 0;
+        }
+
+        .list-group-item:hover {
+            background-color: #F7F7F7;
+        }
+
+        /* Footer styles */
+        footer {
+            padding: 50px 0;
+        }
+
+        footer h5 {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #fff;
+            margin-bottom: 1rem;
+        }
+
+        footer p {
+            color: #fff;
+        }
+
+        .footer-link {
+            color: #FFD700;
+        }
+
+        .footer-link:hover {
+            color: #D80000;
+            text-decoration: none;
+        }
+
+        footer hr {
+            border-top: 1px solid #fff;
+            margin: 30px 0;
+        }
+
+        footer p.text-center {
+            margin-top: 20px;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 767px) {
+            .navbar-brand {
+                font-size: 1.25rem;
+            }
+
+            .card-title {
+                font-size: 1rem;
+            }
+        }
+
+        /* Styling for the Meet Our Drivers section */
+        #drivers {
+            padding: 80px 0;
+        }
+
+        #drivers h2 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 40px;
+        }
+
+        .card {
+            border: none;
+            border-radius: 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .card-img-top {
+            border-radius: 0;
+        }
+
+        .card-body {
+            text-align: center;
+        }
+
+        .card-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .card-text {
+            font-size: 16px;
+            line-height: 24px;
+            margin-bottom: 20px;
+        }
+
+        .btn-primary {
+            background-color: #dc3545;
+            border-color: #dc3545;
+            border-radius: 0;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .btn-primary:hover {
+            background-color: #c82333;
+            border-color: #c82333;
+        }
+
+        .logo {
+            height: 40%;
+            width: 70%;
+        }
+
+        .text-center.mb-4.bg-dark {
+            color: white;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .stats {
+            background-color: #f2f2f2;
+            padding: 60px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 50px;
+        }
+
+        .stat {
+            background-color: #fff;
+            text-align: center;
+            padding: 30px;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+
+        .stat-title {
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .stat-number {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .stat-description {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        .intro-section h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .intro-section p {
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+
+        .intro-section .card {
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="sflogo-img mr-auto">
+            <a class="navbar-brand" href="#">
+                <img src="sflogo3.png" alt="Scuderia Ferrari" class="logo">
+            </a>
+        </div>
+        <a class="navbar-brand ml-auto" href="#">SCUDERIA FERRARI</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav>
+
+
+    <!-- Main Content -->
+    <section class="carousel-section ">
+        <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
+                <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
+                <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="f1car.jpeg" class="d-block w-100" alt="Carousel Image 2">
+                    <div class="carousel-caption">
+                        <h5>The BEAST</h5>
+                        <p>Ferrari's Formula One (F1) cars are the pinnacle of automotive engineering and performance.
+                            They are highly advanced, aerodynamically designed machines that are capable of achieving
+                            incredible speeds and handling with precision and agility. Ferrari F1 cars are powered by
+                            turbocharged V6 engines that produce around 700 horsepower, and they feature advanced
+                            electronic systems that control everything from engine performance to suspension and
+                            braking. The team's iconic red livery and prancing horse emblem are instantly recognizable
+                            around the world, and their passionate fans are some of the most dedicated in all of
+                            motorsport. Ferrari F1 cars have won numerous championships over the years and remain a
+                            dominant force in the sport to this day.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="f1img-2-jets.jpeg" class="d-block w-100" alt="Carousel Image 1">
+                    <div class="carousel-caption">
+                        <h5>Scuderia Ferrari</h5>
+                        <p>The Ferrari F1 team is renowned for its passion, dedication, and tireless work ethic. From
+                            the mechanics to the engineers, every member of the team plays a vital role in the success
+                            of the Ferrari brand on the racetrack. Their ability to work together seamlessly and
+                            overcome challenges is truly inspiring. The hard work and dedication of the Ferrari F1 work
+                            team is a testament to what can be achieved through perseverance and teamwork. We salute
+                            them for their incredible achievements and look forward to their continued success on the
+                            track.</p>
+                    </div>
+                </div>
+
+                <div class="carousel-item ">
+                    <img src="fansf1.jpeg" class="d-block w-100" alt="Carousel Image 1">
+                    <div class="carousel-caption">
+                        <h5>Forza Ferrari!</h5>
+                        <p>Ferrari F1 fans, you are truly some of the most passionate and dedicated fans in the world.
+                            Your unwavering support for the Scuderia Ferrari team is an inspiration to all of us.
+                            Through the ups and downs, you continue to stand by the team with loyalty and enthusiasm,
+                            and for that, we are truly grateful. Keep on cheering, keep on supporting, and keep on
+                            showing the world what it means to be a true Ferrari fan. </p>
+                    </div>
+                </div>
+
+            </div>
+            <a class="carousel-control-prev" href="#myCarousel" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden"></span>
+            </a>
+            <a class="carousel-control-next" href="#myCarousel" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden"></span>
+            </a>
+        </div>
+    </section>
+
+
+
+
+
+
+    <section id="drivers" class="bg-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="text-center mb-4 bg-dark">MEET OUR DRIVERS</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-6 mb-4">
+                    <div class="card">
+                        <img class="card-img-top" src="Charlesimg.jpeg" alt="Driver 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Charles Leclerc</h5>
+                            <p class="card-text">Charles Leclerc is a Monegasque racing driver currently
+                                competing in
+                                Formula One for Scuderia Ferrari. He is a former Formula Two champion and has
+                                earned
+                                multiple podium finishes and pole positions in Formula One. Leclerc is known for
+                                his
+                                speed, racecraft, and precision driving, and is considered one of the most
+                                promising
+                                young drivers in the sport.</p>
+                            <a href="https://www.formula1.com/en/drivers/charles-leclerc.html"
+                                class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 mb-4">
+                    <div class="card">
+                        <img class="card-img-top" src="carlosnewimg.jpg" alt="Driver 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Carlos Sainz</h5>
+                            <p class="card-text">Carlos Sainz is a Spanish racing driver who competes in Formula
+                                One for
+                                Ferrari. He was born on April 12, 1994, in Madrid, Spain. Sainz made his Formula
+                                One
+                                debut in 2015 with Toro Rosso and has since driven for Renault, McLaren, and now
+                                Ferrari. He has earned a reputation as a consistent and versatile driver, known
+                                for his
+                                speed and racecraft</p>
+                            <a href="https://www.formula1.com/en/drivers/carlos-sainz.html"
+                                class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="stats">
+        <div class="container ">
+            <h2 class="section-title">TEAM STATS</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="stat">
+                        <h3 class="stat-title">Championships</h3>
+                        <p class="stat-number">16</p>
+                        <p class="stat-description">Number of Constructors' Championships won by Scuderia
+                            Ferrari.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="stat">
+                        <h3 class="stat-title">Race Wins</h3>
+                        <p class="stat-number">238</p>
+                        <p class="stat-description">Number of Grand Prix wins by Scuderia Ferrari drivers.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="stat">
+                        <h3 class="stat-title">Podium Finishes</h3>
+                        <p class="stat-number">772</p>
+                        <p class="stat-description">Number of times SF drivers have finished on
+                            the podium
+                            in GP races.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="stat">
+                        <h3 class="stat-title">Fastest Laps</h3>
+                        <p class="stat-number">254</p>
+                        <p class="stat-description">Number of fastest laps set by Scuderia Ferrari drivers in
+                            GP races.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="stat">
+                        <h3 class="stat-title">Pole Positions</h3>
+                        <p class="stat-number">228</p>
+                        <p class="stat-description">Number of pole positions earned by Scuderia Ferrari drivers
+                            in GP races.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="stat">
+                        <h3 class="stat-title">Total Points</h3>
+                        <p class="stat-number">8324.5</p>
+                        <p class="stat-description">Total points earned by Scuderia Ferrari in Grand Prix races.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="news" class="py-5 bg-dark">
+        <div class="container">
+            <h2 class="text-center mb-4 text-light">Latest News</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-4" id="card1">
+                        <img src="f1news1.jpeg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">WORK
+                                IN
+                                PROGRESS</h5>
+                            <p class="card-text">Scuderia Ferrari spent Friday free practice for the Australian
+                                Grand
+                                Prix working on a busy programme aimed mainly at getting all the performance out of
+                                the
+                                SF-23 in race trim, without however neglecting preparations for qualifying. </p>
+                            <a id="rm1"
+                                href="https://www.ferrari.com/en-EN/formula1/articles/australian-grand-prix-2023-free-practice-report"
+                                class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4" id="card2">
+                        <img src="roma news.jpeg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Ferrari's New Car Model Unveiled at Auto Show</h5>
+                            <p class="card-text">The
+                                new
+                                ferrari
+                                roma
+                                spider
+                                shines
+                                in
+                                morocco, Ferrari Roma Spider were the absolute stars of an event
+                                dedicated to the launch of the new car in Morocco.</p>
+                            <a id="rm2"
+                                href="https://www.ferrari.com/en-EN/articles/the-new-ferrari-roma-spider-shines-in-morocco"
+                                class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4" id="card3">
+                        <img src="f1news3.jpeg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">SHELL,
+                                PARTNER
+                                OF
+                                THE
+                                FERRARI
+                                HYPERCAR
+                                PROGRAMME</h5>
+                            <p class="card-text">Shell’s support for the Ferrari Hypercar programme involves
+                                supplying
+                                lubricants and coolants developed to optimise performance, reliability and
+                                durability.
+                            </p>
+                            <a id="rm3"
+                                href="https://www.ferrari.com/en-EN/hypercar/articles/shell-partner-of-the-ferrari-hypercar-programme"
+                                class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>About Us</h5>
+                    <p>We are a passionate team of F1 enthusiasts dedicated to bringing you the latest news and
+                        updates
+                        about Ferrari.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <p>Email: info@ferrarif1.com</p>
+                    <p>Phone: +1 (123) 456-7890</p>
+                    <p>Address: 123 Main Street, Maranello, Italy</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Follow Us</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-light">Facebook</a></li>
+                        <li><a href="#" class="text-light">Twitter</a></li>
+                        <li><a href="#" class="text-light">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="text-center">&copy; 2023 F1 Ferrari. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>

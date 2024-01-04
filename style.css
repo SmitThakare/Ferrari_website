@@ -1,0 +1,439 @@
+.logo {
+    size: 5%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.background {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-image: url('bg_sf.jpeg');
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+}
+
+.object {
+    position: absolute;
+    z-index: 2;
+    background-color: #201c1c;
+    width: 47%;
+    height: 22%;
+    bottom: 0%;
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    color: white;
+    border-radius: 10px;
+}
+
+.carousel-caption h5 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.carousel-caption p {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.carousel-indicators li {
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+}
+
+.carousel-indicators li.active {
+    background-color: #ff4b4b;
+}
+
+
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    color: white;
+    font-size: 2rem;
+}
+
+.carousel-control-prev {
+    left: 50px;
+}
+
+.carousel-control-next {
+    right: 50px;
+}
+
+.lowerbody {
+    height: 80px;
+    width: 100%;
+    background-color: #201c1c;
+}
+
+.lowerbody2 {
+    height: 80px;
+    width: 100%;
+    background-color: white;
+}
+
+.auto-img {
+    width: auto;
+    height: 100vh;
+
+}
+
+.racing-img {
+    width: auto;
+    height: 100vh;
+
+}
+
+.history-img {
+    width: auto;
+    height: 100vh;
+
+}
+
+.Collezione {
+    font-size: 50px;
+    margin: 0px;
+    padding: 0px;
+    letter-spacing: 1px;
+
+}
+
+.Ferrari {
+    font-size: 200px;
+    margin: 0px;
+    padding: 0px;
+    letter-spacing: 15px;
+
+}
+
+.heading {
+    z-index: 3;
+    position: absolute;
+    bottom: 13%;
+    left: 10%;
+    color: #ffff;
+    vertical-align: middle;
+    margin: 0px;
+    padding: 0px;
+}
+
+.logo {
+    width: 80px;
+    height: 40px;
+}
+
+
+.navbar {
+    z-index: 4;
+    color: #ffff;
+    text-decoration: none;
+    font-family: Montserrat;
+}
+
+.navbar:hover {
+    font-weight: 600;
+}
+
+.sphead {
+    padding-top: 8%;
+    color: black;
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lp {
+    padding-top: 0px;
+    color: black;
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lp1 {
+    margin: 8px;
+}
+
+.spcar {
+    height: 95vh;
+}
+
+.sp1-mod-info {
+    padding-right: 40px;
+    height: 95vh;
+}
+
+.sp2-mod-info {
+    padding-left: 40px;
+    height: 90vh;
+}
+
+
+.objective {
+    width: 100%;
+    height: 110vh;
+    padding: 5%;
+    background-color: #201c1c;
+    position: absolute;
+}
+
+.objective {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #ffff;
+    font-size: 25px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.obj-img {
+    flex: 0 0 auto;
+    margin-right: 20px;
+
+}
+
+.obj-description {
+    flex: 1 1 auto;
+}
+
+.obj-description p {
+    margin: 0;
+}
+
+.wlc {
+    font-size: 50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.engine {
+    width: auto;
+    height: 720px;
+}
+
+.container1 {
+    padding: 0%;
+    margin: 0%;
+}
+
+
+.container2 {
+    z-index: 1;
+    height: 110vh;
+    width: 100%;
+}
+
+.autoquote {
+    z-index: 2;
+    background-color: #201c1c;
+}
+
+.autoquote {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+    color: antiquewhite;
+    font-size: 24px;
+}
+
+.quote {
+    text-align: center;
+    size: 70px;
+    z-index: 3;
+}
+
+.quoteby {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.navbar {
+    z-index: 3;
+    color: #ffff;
+    text-decoration: none;
+    font-family: Montserrat;
+}
+
+.navbar:hover {
+    font-weight: 600;
+}
+
+.logo {
+    width: 95px;
+    height: 40px;
+}
+
+.lowercont {
+    z-index: 4;
+    background-color: #201c1c;
+    height: 1020vh;
+    width: 100%;
+}
+
+.hr-b {
+    width: 80%;
+    background-color: black;
+    border-radius: 5px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+hr {
+    width: 80%;
+    background-color: white;
+    border-radius: 5px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.topheading {
+    color: aqua;
+    padding-left: 30px;
+}
+
+.C1 {
+    padding-top: 0%;
+    height: 70%;
+    width: 48%;
+}
+
+.car2 {
+    height: 95vh;
+}
+
+.car1 {
+    padding-right: 60px;
+    background-color: #201c1c;
+    height: 90vh;
+}
+
+.modellogo {
+    padding-left: 120px;
+    padding-top: 40px;
+    width: fit-content;
+}
+
+.modellogo2 {
+    padding-left: 250px;
+    padding-top: 40px;
+    width: fit-content;
+}
+
+.info-toggle {
+    padding-left: 120px;
+    padding-top: 70px;
+    padding-bottom: 0;
+    width: fit-content;
+}
+
+.info-toggle2 {
+    padding-left: 120px;
+    padding-top: 0px;
+    padding-bottom: 0;
+    width: fit-content;
+}
+
+.mod-info {
+    padding-right: 40px;
+    background-color: #201c1c;
+    height: 90vh;
+}
+
+.mod-info2 {
+    padding-top: 30px;
+    padding-left: 700px;
+
+}
+
+.C2 {
+    padding-top: 40px;
+    height: 70%;
+    width: 50%;
+    padding-left: 60px;
+}
+
+.specialseries {
+    z-index: 4;
+    background-color: #ffff;
+    height: 150vh;
+    width: 100%;
+}
+
+/* .obj-description {
+    top: 20%;
+    bottom: 30%;
+    font-family: 'Courier New', Courier, monospace;
+    position: relative;
+    font-size: 25px;
+    color: #ffff;
+    padding-left: 10px;
+}
+
+
+
+
+ */
+
+/* .container {
+    height: 100vh;
+    width: 100%;
+    background-image: url(bg1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 8s;
+
+    animation-name: animate;
+    animation-direction: alternate-reverse;
+    animation-duration: 30s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-timing-function: ease-in-out;
+
+}
+
+@keyframes animate {
+    0% {
+        background-image: url(bg2.jpg );
+    }
+
+    20% {
+        background-image: url(bg3.jpg );
+    }
+
+    40% {
+        background-image: url(bg4.jpg );
+    }
+
+    60% {
+        background-image: url(bg5.jpg );
+    }
+
+    80% {
+        background-image: url(bg2.jpg );
+    }
+
+    100% {
+        background-image: url(bg4.jpg );
+    }
+} */
