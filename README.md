@@ -6,11 +6,7 @@ Welcome to the Ferrari F1 Website! This web project was developed using advanced
 - [Introduction](#introduction)
 - [Features](#features)
 - [Technologies Used](#technologies-used)
-- [Getting Started](#getting-started)
-- [Project Structure](#project-structure)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
+
 
 ## Introduction
 This website is designed to provide an immersive experience for Ferrari F1 enthusiasts. It includes sections dedicated to Ferrari's Formula 1 history, detailed information about various Ferrari models, and the latest news updates.
